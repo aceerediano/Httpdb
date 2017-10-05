@@ -11,7 +11,7 @@ import 'rxjs/add/operator/map'
   styleUrls: ['./removeperson.component.css']
 })
 export class RemovepersonComponent implements OnInit {
-  baseURL = 'https://firstprojectdb.firebaseio.com/';
+  baseURL = 'https://crudact.firebaseio.com/';
   remove: boolean = true;
   rootNode = 'people';
 

@@ -11,11 +11,11 @@ export class DatabaseService {
   constructor(private http: Http) { }
 
   saveData(data: object) {
-      return this.http.post('https://firstprojectdb.firebaseio.com/people.json', data);
+      return this.http.post('https://crudact.firebaseio.com/people.json', data);
   }
 
   getData() {
-      return this.http.get('https://firstprojectdb.firebaseio.com/people.json')
+      return this.http.get('https://crudact.firebaseio.com/people.json')
       .map(
         (response: Response) => {
             const data = response.json();
@@ -24,7 +24,7 @@ export class DatabaseService {
       )
       .catch(
         (error: Response) => {
-            return Observable.throw('There was something wrong in the retrieval of the data...');
+            return Observable.throw('There was something wrong in the retrieval of the data from the Database');
         }
       );
   }

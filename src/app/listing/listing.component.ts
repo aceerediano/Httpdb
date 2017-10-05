@@ -18,7 +18,7 @@ import 'rxjs/add/operator/map'
 export class ListingComponent implements OnInit {
   @Output() modifyClicked = new EventEmitter<any>();
 
-  baseURL = 'https://firstprojectdb.firebaseio.com/';
+  baseURL = 'https://crudact.firebaseio.com/';
   rootNode = 'people';
 
   peopleCollection: Array<IPerson> = [];
